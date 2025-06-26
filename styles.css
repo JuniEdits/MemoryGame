@@ -1,0 +1,94 @@
+    /* Γενικό στυλ της σελίδας */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+
+    h1 { color: #333; }
+
+    /* Πίνακας παιχνιδιού με πλέγμα */
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 10px;
+      perspective: 800px; /* Προσθέτει 3D εφέ */
+      margin-top: 20px;
+    }
+
+    /* Βασικό στυλ για κάθε κάρτα */
+    .card {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+      cursor: pointer;
+    }
+
+    .card.flipped {
+      transform: rotateY(180deg); /* Περιστροφή όταν είναι ανοιχτή */
+    }
+
+    .card-face {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
+      font-weight: bold;
+      color: #fff;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .card-back {
+      background-color: #4CAF50; /* Πράσινο - πίσω όψη */
+      transform: rotateY(0deg);
+    }
+
+    .card-front {
+      background-color: #2196F3; /* Μπλε - μπροστά όψη */
+      transform: rotateY(180deg);
+    }
+
+    /* Χρυσό χρώμα για τις κάρτες που ταιριάζουν */
+    .card.matched .card-front {
+      background-color: #FFD700 !important;
+      color: #000;
+    }
+
+    .card-face img { /* Style for the images */
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+
+    /* Στυλ για το κάτω μέρος του πίνακα (κουμπί και μετρητής) */
+    .controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    #reset-button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #reset-button:hover {
+      background-color: #0056b3;
+    }
