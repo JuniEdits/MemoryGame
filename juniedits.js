@@ -5,14 +5,14 @@
 
     // Σύμβολα για τις κάρτες (διπλότυπα για ζεύγη) - Τώρα είναι διαδρομές εικόνων
     const symbols = [
-      'Sprunki/Sprunki Sky.jpg',
-      'Sprunki/Sprunki Vineria.jpg',
-	  'Sprunki/Sprunki Durple.jpg',
-      'Sprunki/Sprunki Oren.jpg',
-	  'Sprunki/Sprunki Jevin.jpg',
-      'Sprunki/Sprunki Pinki.jpg',
-	  'Sprunki/Sprunki Raddy.jpg',
-      'Sprunki/Sprunki Simon.jpg'
+      'Sprunki Sky.jpg',
+      'Sprunki Vineria.jpg',
+	  'Sprunki Durple.jpg',
+      'Sprunki Oren.jpg',
+	  'Sprunki Jevin.jpg',
+      'Sprunki Pinki.jpg',
+	  'Sprunki Raddy.jpg',
+      'Sprunki Simon.jpg'
      
     ];
     let cards = [], flipped = [], matched = [], matches = 0, canFlip = true;
